@@ -5,8 +5,10 @@ import Guitarra from './components/Guitarra.vue'
 
 const guitarras = ref(db)
 
+const agregarCarrito = (guitarra) => {
+    console.log(guitarra)
+}
 
-console.log(guitarras.value)
 
 </script>
 
@@ -105,6 +107,7 @@ console.log(guitarras.value)
           <Guitarra 
           v-for="guitarra in guitarras"
           v-bind:guitarra="guitarra"
+          @agregar-carrito="agregarCarrito"
           />
             
         </div>
